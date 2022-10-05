@@ -24,7 +24,7 @@ console.log(res3);
 var res4=res.reduce((acc,cv)=>acc+cv.population,0);
 console.log(res4);
 // e.
-// var res5=res.filter((ele)=>ele.currencies.name=="United States dollar").map((ele)=>ele.name);
-// console.log(res5);
+var res5 = res.filter((ele)=>(ele.currencies!=undefined && ele.currencies[0].code=="USD")).map((ele)=>ele.name);  
+console.log(res5);
 
 };
